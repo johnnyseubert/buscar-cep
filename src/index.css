@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+   --cold: #f5f6ff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Helvetica, sans-serif;
+   outline: none;
+}
+
+.screen {
+   width: 100%;
+   height: 100vh;
+   padding: 20px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+}
+
+form {
+   max-width: 500px;
+   width: 100%;
+   padding: 20px;
+   border: 1px solid rebeccapurple;
+   border-radius: 4px;
+
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.form-search {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.form-search input {
+   width: 100%;
+   padding: 8px 16px;
+   border: 1px solid rebeccapurple;
+   border-radius: 4px;
+   background-color: var(--cold);
+}
+
+.form-search button {
+   width: 200px;
+   height: 33px;
+   background-color: rebeccapurple;
+   color: var(--cold);
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   opacity: 0.8;
+   transition: 0.2s;
+}
+
+.form-search button:hover {
+   opacity: 1;
+}
+
+.form-info {
+   width: 100%;
+   flex: 1;
+}
+
+.form-info .form-group {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-bottom: 10px;
+}
+
+.form-info .form-group input {
+   padding: 8px 16px;
+   background-color: var(--cold);
+   border: 1px solid rebeccapurple;
+   border-radius: 4px;
+}
+
+.modal-wrapper {
+   width: 100%;
+   height: 100vh;
+   z-index: 10000;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.modal-content {
+   width: 700px;
+   height: 150px;
+   background-color: white;
+   border-radius: 4px;
+   box-shadow: 0px 1px 10px gray;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.modal-content button {
+   padding: 10px;
+   cursor: pointer;
+   background-color: rebeccapurple;
+   color: white;
+   border: none;
+   border-radius: 4px;
 }
